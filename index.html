@@ -19,6 +19,12 @@
     }).addTo(mymap);
             var marker = L.marker([51.12983, -2.73341]).addTo(mymap)
 	    marker.bindPopup("<b>Hello world!</b><br>Dreams die here.").openPopup();
+	    var circle = L.circle([51.12983, -2.73341], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(mymap);
     </script>
   </body>    
 </html>
