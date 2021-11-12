@@ -19,6 +19,14 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	  	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mymap);
+	    var surface = L.tileLayer('https://geoffrowland.github.io/Surface-Street/{z}/{x}/{y}.png', {
+	    tms: true, 
+	    opacity: 1.0,
+	    maxNativeZoom: 18,	
+	    maxZoom: 20,
+	    minZoom: 12,
+	    attribution: 'LiDAR 1m DSM Environment Agency OGL &copy; Crown Copyright 2021'
+        });
             var marker = L.marker([51.12983, -2.73341]).addTo(mymap)
 	    marker.bindPopup("<b>Beware!</b><br>Dreams die here.")
 	    var marker = L.marker([51.125014, -2.734303]).addTo(mymap)
